@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react'
 
-import { Heading, TextProps } from '@ignite-ui/react'
+import { Heading, TextProps } from '@damaris-ui/react'
 
 export default {
   title: 'Typography/Heading',
