@@ -17,4 +17,4 @@ export function Avatar(props: AvatarProps) {
   )
 }
 
-export default Avatar
+Avatar.displayName = 'Avatar'
