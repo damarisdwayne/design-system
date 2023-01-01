@@ -11,7 +11,7 @@ export function MultiStep({ size, currentStep = 1 }: MultiStepProps) {
       <Label>
         Passo {currentStep} de {size}
       </Label>
-      <Steps css={{ '---steps-size': size }}>
+      <Steps css={{ gridTemplateColumns: `repeat(${size}, 1fr)` }}>
         {Array.from({ length: size }, (_, i) => i + 1).map((step) => {
           return <Step key={step} active={currentStep >= step} />
         })}

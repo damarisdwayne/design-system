@@ -453,7 +453,6 @@ var Label = styled(Text, {
 });
 var Steps = styled("div", {
   display: "grid",
-  gridTemplateColumns: "repeat(var(--steps-size), 1fr)",
   gap: "$2",
   marginTop: "$1"
 });
@@ -478,7 +477,7 @@ function MultiStep({ size, currentStep = 1 }) {
       " de ",
       size
     ] }),
-    /* @__PURE__ */ jsx4(Steps, { css: { "---steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+    /* @__PURE__ */ jsx4(Steps, { css: { gridTemplateColumns: `repeat(${size}, 1fr)` }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
       return /* @__PURE__ */ jsx4(Step, { active: currentStep >= step }, step);
     }) })
   ] });
