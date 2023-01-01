@@ -9,6 +9,13 @@ export default {
     src: 'http://github.com/damarisdwayne.png',
     alt: 'Dâmaris Dwayne',
   },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
