@@ -1,0 +1,2 @@
+import{A as t}from"./index-4e16aba4.js";import"./index-34e51894.js";import"./es.object.get-own-property-descriptor-64192e07.js";import"./index-75cd1920.js";import"./jsx-runtime-da4cfb3b.js";const m={title:"Data display/Avatar",component:t,args:{src:"http://github.com/damarisdwayne.png",alt:"Dâmaris Dwayne"},argTypes:{src:{control:{type:"text"}}}},p={},c={args:{src:void 0}},e=["Primary","WitFallback"];export{p as Primary,c as WitFallback,e as __namedExportsOrder,m as default};
+//# sourceMappingURL=Avatar.stories-1639fd46.js.map
