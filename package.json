@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
+    "storybook": "cd packages/storybook && npm run storybook --no-manager-cache",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo run build --filter=packages/docs && changeset publish"
