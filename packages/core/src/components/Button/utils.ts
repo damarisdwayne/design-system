@@ -55,18 +55,25 @@ export const setSVGStyles = (
   `
 }
 
-export const getButtonWidth = (isFullWidth: boolean, isSmall: boolean) => {
-  if (isSmall) {
-    return '36px'
+export const getButtonWidth = (
+  isIconButton: boolean,
+  isFullWidth: boolean,
+  isSmall: boolean,
+) => {
+  if (isIconButton) {
+    return isSmall ? '36px' : '53px'
   }
 
-  if (isFullWidth) {
+  if (isFullWidth && !isIconButton) {
     return '100%'
   }
 
-  return '53px'
+  return 'auto'
 }
 
-export const getButtonHeight = (isSmall: boolean) => {
-  return isSmall ? '36px' : '53px'
+export const getButtonHeight = (isIconButton: boolean, isSmall: boolean) => {
+  if (isIconButton) {
+    return isSmall ? '36px' : '53px'
+  }
+  return 'auto'
 }

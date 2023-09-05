@@ -15,6 +15,21 @@ export type Borders = {
   }
 }
 
+export type Shadows = {
+  default: (color: string) => string
+  hover: string
+  pressed: string
+  blurred: string
+  infoShadow: (firstColor: string) => string
+  containedFocus: (firstColor: string, secondColor: string) => string
+  outlinedFocus: (
+    firstColor: string,
+    secondColor: string,
+    thirdColor: string,
+    fourthColor: string,
+  ) => string
+}
+
 export type Breakpoints = {
   xl: number
   lg: number

@@ -3,7 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react'
 import { Flexbox, FlexboxProps } from '@damaris-ui/core'
 
 export default {
-  title: 'Surfaces/Flexbox',
+  title: 'Organisms/Flexbox',
   component: Flexbox,
   args: {
     children: (

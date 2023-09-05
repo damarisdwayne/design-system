@@ -2,7 +2,6 @@ import type { StoryObj, Meta } from '@storybook/react'
 
 import { Button, ButtonProps } from '@damaris-ui/core'
 import { ArrowRight } from 'phosphor-react'
-import { colors } from '@damaris-ui/theme'
 
 export default {
   title: 'Form/Button',
@@ -17,9 +16,7 @@ export default {
 export const Primary: StoryObj<ButtonProps> = {
   args: {
     variant: 'contained',
-    bgColor: colors.primary200,
-    hoverColor: colors.primary300,
-    color: colors.white,
+    color: 'primary',
     children: 'Send',
   },
 }
@@ -27,17 +24,14 @@ export const Primary: StoryObj<ButtonProps> = {
 export const Outlined: StoryObj<ButtonProps> = {
   args: {
     variant: 'outlined',
-    bgColor: colors.primary200,
-    hoverColor: colors.primary300,
+    color: 'primary',
     children: 'Create new',
   },
 }
 export const Secondary: StoryObj<ButtonProps> = {
   args: {
     variant: 'contained',
-    bgColor: colors.secondary200,
-    hoverColor: colors.secondary300,
-    color: colors.white,
+    color: 'secondary',
     children: 'Create new',
   },
 }
@@ -52,18 +46,12 @@ export const Text: StoryObj<ButtonProps> = {
 export const Small: StoryObj<ButtonProps> = {
   args: {
     children: 'Cancel',
-    bgColor: colors.primary200,
-    hoverColor: colors.primary300,
-    color: colors.white,
     isSmall: true,
   },
 }
 
 export const WithIcon: StoryObj<ButtonProps> = {
   args: {
-    bgColor: colors.primary200,
-    hoverColor: colors.primary300,
-    color: colors.white,
     children: (
       <>
         Próximo passo
