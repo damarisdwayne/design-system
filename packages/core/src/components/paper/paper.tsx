@@ -13,7 +13,7 @@ export const Paper = forwardRef(
   (
     { width, height, bgColor = undefined, ...rest }: PaperProps,
     ref: Ref<HTMLDivElement>,
-  ) => {
+  ): JSX.Element => {
     const {
       minimal = false,
       alertProps = null,
@@ -42,7 +42,7 @@ export const Paper = forwardRef(
             flexDirection="row"
             justifyContent="space-between"
             alignItems="center"
-            width="100%"
+            fullWidth
             {...rest}
           >
             {cardTitleProps.children ? (
@@ -50,7 +50,7 @@ export const Paper = forwardRef(
             ) : (
               <>
                 <StyledPaperTitle {...rest}>
-                  {cardTitleProps.title}{' '}
+                  {cardTitleProps.title}
                 </StyledPaperTitle>
                 {cardTitleProps.endAdornment && (
                   <StyledPaperEndAdornment>

@@ -1,4 +1,3 @@
-import styled from 'styled-components'
+export * from 'styled-components'
 export * from './components'
-
-export { styled }
+export { default as GlobalStyles } from './globalStyles'

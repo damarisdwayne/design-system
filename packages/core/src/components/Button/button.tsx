@@ -1,8 +1,9 @@
-import React, { ButtonHTMLAttributes, forwardRef, Ref } from 'react'
+import React, { forwardRef, Ref } from 'react'
 
 import { StyledDisabledButton, StyledVariantButton } from './styles'
+import { ComponentProps } from '../../types'
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ComponentProps {
   variant?: 'contained' | 'outlined' | 'text'
   color?: 'primary' | 'secondary'
   disabled?: boolean

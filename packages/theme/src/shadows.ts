@@ -1,12 +1,12 @@
 import { hexToRgba } from '@damaris-ui/utils'
+import palette from './colors'
 import { Shadows } from './types'
-import { colors } from './colors'
 
 export const defaultRGBA = (alpha: number, color?: string) =>
-  hexToRgba(color ?? colors.gray900, alpha)
+  hexToRgba(color ?? palette.grayScale[900], alpha)
 
 export const shadows: Shadows = {
-  default: (color: string = colors.gray900) =>
+  default: (color: string = palette.grayScale[900]) =>
     `0px 18px 60px -30px  ${hexToRgba(color, 0.18)}`,
   hover: `0px 27px 100px -20px  ${defaultRGBA(
     0.2,
@@ -16,7 +16,7 @@ export const shadows: Shadows = {
     0.2,
   )},  0px 4px 15px -10px  ${defaultRGBA(0.2)}`,
   pressed: `0px 4px 10px -8px  ${defaultRGBA(0.2)}`,
-  blurred: `0 0 19px 13px  ${colors.gray100}`,
+  blurred: `0 0 19px 13px  ${palette.grayScale[50]}`,
   infoShadow: (firstColor: string) => `0px 9px 50px -14px ${firstColor}`,
   outlinedFocus: (
     firstColor: string,

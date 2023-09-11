@@ -1,27 +1,4 @@
-export const colors = {
-  white: '#FFF',
-
-  gray100: '#E1E1E6',
-  gray200: '#A9A9B2',
-  gray400: '#7C7C8A',
-  gray500: '#505059',
-  gray600: '#323238',
-  gray700: '#29292E',
-  gray800: '#202024',
-  gray900: '#121214',
-
-  primary100: '#50e590',
-  primary200: '#35c8a4',
-  primary300: '#23a27f',
-
-  blue100: '#6baabf',
-  blue200: '#36a3cc',
-  blue300: '#3498db',
-
-  secondary100: '#F8D2DB',
-  secondary200: '#DD1F4A',
-  secondary300: '#B3193C',
-}
+import { Palette } from './types'
 
 export const primary = {
   darker: '#242F38',
@@ -45,8 +22,9 @@ export const grayScale = {
   300: '#E1E3E5',
   400: '#D0D5D9',
   450: '#969899',
-  500: '#ADB3B8',
+  500: '#AFAFAF',
   600: '#8B9399',
+  650: '#838386',
   700: '#707980',
   800: '#576066',
   900: '#1F2326',
@@ -65,16 +43,16 @@ export const text = {
   secondary: primary.main,
   tertiary: secondary.main,
   disabled: grayScale[400],
-  placeholder: grayScale[600],
-  label: primary.darker,
-  inverted: '#FFFFFF',
+  placeholder: grayScale[900],
+  label: grayScale[650],
+  white: '#FFFFFF',
 }
 
 export const buttons = {
   primary: {
     contained: {
       default: {
-        color: colors.white,
+        color: grayScale[50],
         background: primary.main,
         border: primary.main,
       },
@@ -213,7 +191,7 @@ export const buttons = {
   },
 }
 
-export const palette = {
+export const palette: Palette = {
   primary,
   secondary,
   grayScale,

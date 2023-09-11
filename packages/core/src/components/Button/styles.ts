@@ -31,6 +31,7 @@ export const StyledMasterButton = styled.button<ButtonProps>`
       font-weight: ${fonts.button.normal.fontWeight};
       font-size: ${fonts.button.normal.fontSize};
       font-family: 'Inter', sans-serif;
+      cursor: pointer;
       display: flex;
       flex-direction: ${startAdornment ? 'row-reverse' : 'row'};
       justify-content: ${

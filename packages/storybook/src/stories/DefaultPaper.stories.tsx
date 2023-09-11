@@ -4,7 +4,7 @@ import { withDesign } from 'storybook-addon-designs'
 import { PaperPlaceholder } from '../placeholders'
 
 export default {
-  title: 'Organisms/Paper/Default Paper',
+  title: 'Organisms/Default Paper',
   component: Paper,
   decorators: [withDesign],
   argTypes: {

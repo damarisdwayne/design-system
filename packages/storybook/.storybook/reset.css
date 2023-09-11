@@ -1,0 +1,31 @@
+body,
+.sb-show-main.sb-main-padded {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.language-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.language-selector li {
+  list-style: none;
+  color: #242f38;
+  transition: all 0.5s ease;
+}
+
+.language-selector li:hover {
+  list-style: none;
+  color: #1b8db3;
+}
+
+.table-view > p:not(:last-child) {
+  padding-right: 20px;
+  border-right: 2px solid #ccc;
+}

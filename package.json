@@ -14,5 +14,8 @@
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
     "turbo": "^1.6.3"
+  },
+  "dependencies": {
+    "react-router-dom": "^6.15.0"
   }
 }

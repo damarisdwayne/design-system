@@ -1,7 +1,8 @@
 import { pxToRem } from '@damaris-ui/utils'
 import spacings from './spacings'
+import { Fonts } from './types'
 
-export const fonts = {
+export const fonts: Fonts = {
   highlight: {
     lg: {
       fontWeight: 600,

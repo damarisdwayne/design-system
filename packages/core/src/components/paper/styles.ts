@@ -1,4 +1,5 @@
 import {
+  Palette,
   borders,
   fonts,
   grayScale,
@@ -9,7 +10,7 @@ import {
 } from '@damaris-ui/theme'
 import { pxToRem } from '@damaris-ui/utils'
 import styled, { css, keyframes } from 'styled-components'
-import { ButtonProps } from '../button/button'
+import { ButtonProps } from '../button'
 import { Flexbox, FlexboxProps } from '../flexbox'
 import { PaperProps } from './types'
 
@@ -43,6 +44,7 @@ export const StyledDefaultPaper = styled(Flexbox)<PaperProps>`
     minimal,
   }: PaperProps) => {
     return css`
+    margin: 0;
       padding-inline: ${
         noPadding ? '0 !important' : paddings.card.desktop.inline
       };
@@ -89,6 +91,7 @@ export const StyledDefaultPaper = styled(Flexbox)<PaperProps>`
           noPadding ? '0 !important' : paddings.card.mobile.block
         };
       }
+      ${customStyles ? { ...customStyles } : {}}
     `
   }}
 `
@@ -98,10 +101,12 @@ export const StyledPaperTitleWrapper = styled(Flexbox)<TitleProps>`
   border-bottom: ${`1px solid ${palette.grayScale[100]}`};
   padding: ${({ noPadding }): string | undefined =>
     noPadding ? '0' : paddings.cardTitle};
+  ${({ cardTitleProps }) => cardTitleProps?.customStyles || {}}
 `
 
 export const StyledPaperTitle = styled.h4`
   font-weight: ${fonts.heading.h1.fontWeight};
+  font-family: 'Inter', sans-serif;
   font-size: ${fonts.heading.h1.fontSize};
   line-height: ${fonts.heading.h1.lineHeight};
   text-align: left;
@@ -113,12 +118,12 @@ export const StyledPaperActions = styled(Flexbox)`
 `
 
 export const StyledPaperFooterAlert = styled.div<{
-  alertProps: Partial<PaperProps>
+  alertProps?: PaperProps['alertProps']
 }>`
   ${({ alertProps }) => {
-    const variant = alertProps?.alertProps?.variant || 'success'
+    const variant = alertProps?.variant || 'success'
     return css`
-      background-color: ${palette.system[variant]};
+      background-color: ${palette.system[variant as keyof Palette['system']]};
       font-size: ${fonts.body.small.fontSize};
       color: ${['error', 'success'].includes(variant)
         ? palette.grayScale[50]
