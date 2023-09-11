@@ -1,6 +1,6 @@
 import {
   borders,
-  theme,
+  defaultTheme as theme,
   fonts,
   grayScale,
   paddings,

@@ -6,7 +6,7 @@ import {
   paddings,
   palette,
   spacings,
-  theme,
+  defaultTheme as theme,
 } from '@damaris-ui/theme'
 import { pxToRem } from '@damaris-ui/utils'
 import styled, { css, keyframes } from 'styled-components'

@@ -23,7 +23,7 @@ export { default as paddings } from './paddings'
 export { default as spacings } from './spacings'
 export { default as shadows } from './shadows'
 
-export const theme = {
+export const defaultTheme = {
   borders,
   colors,
   fonts,
