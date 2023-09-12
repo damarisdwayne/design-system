@@ -50,6 +50,8 @@ export const Checkbox = forwardRef(
         >
           <StyledSquareCheckbox
             data-testid={`square-checkbox${isSelected ? '-true' : '-false'}`}
+            alignItems="center"
+            justifyContent="center"
           >
             <Check size="12px" color={palette.grayScale[50]} weight="bold" />
           </StyledSquareCheckbox>

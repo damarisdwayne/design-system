@@ -32,21 +32,21 @@ export const StyledTextFieldContainer = styled.div<Partial<TextFieldProps>>`
     ${({ helperText }) =>
       helperText?.messageType
         ? getVariantColor(helperText.messageType)
-        : palette.grayScale[500]};
+        : palette.grayScale[650]};
   display: flex;
-  align-items: baseline;
+  align-items: center;
 
   > input {
     &::placeholder {
       color: ${({ helperText }) =>
         helperText?.messageType
           ? getVariantColor(helperText.messageType)
-          : palette.grayScale[700]};
+          : palette.grayScale[650]};
     }
   }
 
   &:has(input:focus) {
-    border-color: ${palette.grayScale[400]};
+    border-color: ${palette.grayScale[800]};
   }
 
   &:has(input:disabled) {
@@ -84,4 +84,15 @@ export const StyledTextField = styled.input`
 export const StyledTextFieldWrapper = styled(Flexbox)`
   position: relative;
   padding: 5px;
+`
+
+export const StyledTextFieldIcon = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
 `

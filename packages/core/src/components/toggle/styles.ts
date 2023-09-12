@@ -68,7 +68,6 @@ export const StyledToggleBox = styled(Flexbox)<Partial<ToggleProps>>`
 export const StyledToggleWrapper = styled(Flexbox)`
   padding: 4px;
   transition: all 0.2s;
-  width: 156px;
 
   &:focus-visible,
   &:focus-within {

@@ -24,6 +24,8 @@ export const Toggle = forwardRef(
       <StyledToggleWrapper
         data-testid="toggle-wrapper"
         flexDirection="row"
+        alignItems="flex-start"
+        justifyContent="flex-start"
         gap={pxToRem(16)}
       >
         <StyledToggleBox

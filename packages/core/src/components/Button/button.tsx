@@ -2,6 +2,7 @@ import React, { forwardRef, Ref } from 'react'
 
 import { StyledDisabledButton, StyledVariantButton } from './styles'
 import { ComponentProps } from '../../types'
+import { LoaderIcon } from '../../icons'
 
 export interface ButtonProps extends ComponentProps {
   variant?: 'contained' | 'outlined' | 'text'
@@ -38,7 +39,7 @@ export const Button = forwardRef(
           <>
             {iconButton && isLoading ? <span>loading</span> : children}
             {isLoading && !iconButton ? (
-              <span>loading</span>
+              <LoaderIcon width="40px" height="40px" />
             ) : (
               endAdornment || startAdornment
             )}

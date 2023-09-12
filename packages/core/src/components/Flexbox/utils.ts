@@ -28,7 +28,7 @@ export const getWidth = (props: GetWidthProps): string => {
   if (fullScreen) return '100vw'
   if (fullWidth) return '100%'
   if (width) return typeof width === 'number' ? pxToRem(width) : width
-  return 'auto'
+  return 'max-content'
 }
 
 type GetHeightProps = {
