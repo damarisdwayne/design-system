@@ -1,5 +1,11 @@
 # @damaris-ui/core
 
+## 3.1.0
+
+### Minor Changes
+
+- c5c2d36: added loader and icons
+
 ## 3.0.0
 
 ### Major Changes
