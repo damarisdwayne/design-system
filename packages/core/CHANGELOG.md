@@ -1,5 +1,11 @@
 # @damaris-ui/core
 
+## 3.0.0
+
+### Major Changes
+
+- added checkbox, radio-button, paper,divider, text-field, toggle, typography
+
 ## 2.0.0
 
 ### Major Changes
