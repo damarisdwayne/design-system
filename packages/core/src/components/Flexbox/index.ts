@@ -1,2 +1,2 @@
 export { default as Flexbox } from './flexbox'
-export * from './flexbox'
+export type { FlexboxProps } from './flexbox'
