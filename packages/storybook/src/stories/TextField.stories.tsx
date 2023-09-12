@@ -19,11 +19,20 @@ export const Primary: StoryObj<TextFieldProps> = {
   },
 }
 
-export const Disabled: StoryObj<TextFieldProps> = {
+export const isValid: StoryObj<TextFieldProps> = {
   args: {
-    placeholder: 'Placeholder',
-    disabled: true,
     label: 'Label',
+    placeholder: 'Placeholder',
+    value: 'Teste',
+    isValid: true,
+  },
+}
+
+export const WithIcon: StoryObj<TextFieldProps> = {
+  args: {
+    label: 'Password',
+    placeholder: 'Type your password',
+    type: 'password',
   },
 }
 
@@ -39,5 +48,13 @@ export const WithHelperText: StoryObj<TextFieldProps> = {
     placeholder: 'Placeholder',
     label: 'Label',
     helperText: { label: 'Error message', messageType: 'error' },
+  },
+}
+
+export const Disabled: StoryObj<TextFieldProps> = {
+  args: {
+    placeholder: 'Placeholder',
+    disabled: true,
+    label: 'Label',
   },
 }

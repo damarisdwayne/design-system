@@ -83,6 +83,7 @@ export type Palette = {
     450: string
     500: string
     600: string
+    650: string
     700: string
     800: string
     900: string
