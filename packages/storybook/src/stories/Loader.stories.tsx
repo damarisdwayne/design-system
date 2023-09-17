@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Button, Flexbox, Loader, Typography } from '@damaris-ui/core'
+import { Flexbox, Loader, Typography } from '@damaris-ui/core'
 import { DialogPlaceholder } from '../placeholders'
 
 export default {
@@ -42,6 +42,6 @@ export const Standalone: ComponentStory<typeof Loader> = () => {
   )
 }
 
-export const InsideButton: ComponentStory<typeof Loader> = () => {
-  return <Button isLoading>loading button</Button>
-}
+// export const InsideButton: ComponentStory<typeof Loader> = () => {
+//   return <Button isLoading>loading button</Button>
+// }

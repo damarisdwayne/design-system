@@ -1,6 +1,5 @@
 import React from 'react'
-import { Typography, Button } from '@damaris-ui/core'
-import { ArrowRight } from 'phosphor-react'
+import { Typography } from '@damaris-ui/core'
 
 const PaperPlaceholder: React.FC = () => {
   return (
@@ -21,10 +20,10 @@ const PaperPlaceholder: React.FC = () => {
         quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
         voluptas nulla pariatur?
       </Typography>
-      <Button data-testid="button-wrapper" variant="text" color="primary">
+      {/* <Button data-testid="button-wrapper" variant="text" color="primary">
         Continue
         <ArrowRight />
-      </Button>
+      </Button> */}
     </>
   )
 }

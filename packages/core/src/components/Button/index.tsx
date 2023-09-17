@@ -10,7 +10,6 @@ export interface ButtonProps extends ComponentProps {
   disabled?: boolean
   centered?: boolean
   'data-testid'?: string
-  onClick?: (params?: any) => void
   type?: 'button' | 'submit' | 'reset'
   fullWidth?: boolean
   iconButton?: boolean
