@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { FontProps, fonts, palette } from '@damaris-ui/theme'
-import { TypographyProps } from './typography'
+import { TypographyProps } from '.'
 
 export const StyledTypography = styled.p<TypographyProps>`
   ${({

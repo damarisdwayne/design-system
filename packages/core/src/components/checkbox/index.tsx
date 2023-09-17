@@ -10,8 +10,18 @@ import {
   StyledMessageStatus,
   StyledInputCheckbox,
 } from './styles'
-import { CheckboxProps } from './types'
 import { Check } from 'phosphor-react'
+
+export interface CheckboxProps {
+  label: string
+  id?: string
+  name?: string
+  disabled?: boolean
+  error?: boolean
+  messageStatus?: string
+  isSelected: boolean
+  setIsSelected: (isSelected: boolean) => void
+}
 
 export const Checkbox = forwardRef(
   (props: CheckboxProps, ref: Ref<HTMLDivElement>): JSX.Element => {

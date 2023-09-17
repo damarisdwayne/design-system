@@ -12,7 +12,7 @@ import { pxToRem } from '@damaris-ui/utils'
 import styled, { css, keyframes } from 'styled-components'
 import { ButtonProps } from '../button'
 import { Flexbox, FlexboxProps } from '../flexbox'
-import { PaperProps } from './types'
+import { PaperProps } from './index'
 
 export type CustomPaperProps = PaperProps &
   ButtonProps & {

@@ -1,6 +1,6 @@
 import { palette } from '@damaris-ui/theme'
 import styled, { css } from 'styled-components'
-import { DividerProps } from './divider'
+import { DividerProps } from '.'
 
 export const StyledDivider = styled.div`
   ${({ width, height, noBorder, borderColor, customStyles }: DividerProps) => {

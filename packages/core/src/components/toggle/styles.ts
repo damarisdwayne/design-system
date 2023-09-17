@@ -2,7 +2,7 @@ import { grayScale, primary, shadows, spacings } from '@damaris-ui/theme'
 import { pxToRem } from '@damaris-ui/utils'
 import styled, { css } from 'styled-components'
 import { Flexbox } from '../flexbox'
-import { ToggleProps } from './toggle'
+import { ToggleProps } from '.'
 
 export const StyledToggle = styled.input`
   visibility: hidden;

@@ -4,7 +4,7 @@ import {
   StyledCircleRadioButton,
   StyledFilledContentRadionButton,
 } from './styles'
-import { RadioButtonProps } from './types'
+import { RadioButtonProps } from '.'
 
 export const GetLabelHoverStyles = ({
   error,

@@ -9,7 +9,7 @@ import styled, { css } from 'styled-components'
 
 import { Flexbox } from '../flexbox'
 import { Typography } from '../typography'
-import { RadioButtonProps } from './types'
+import { RadioButtonProps } from '.'
 import { GetLabelHoverStyles, GetRadioButtonActiveStyles } from './utils'
 
 export const StyledCircleRadioButton = styled(Flexbox)`

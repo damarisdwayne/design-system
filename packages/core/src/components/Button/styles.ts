@@ -11,7 +11,7 @@ import {
 } from '@damaris-ui/theme'
 import styled, { css } from 'styled-components'
 import { setSVGStyles, getButtonWidth, getButtonHeight } from './utils'
-import { ButtonProps } from './button'
+import { ButtonProps } from '.'
 
 export const StyledMasterButton = styled.button<ButtonProps>`
   ${({

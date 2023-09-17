@@ -8,7 +8,7 @@ import {
 import { pxToRem } from '@damaris-ui/utils'
 import styled from 'styled-components'
 import { Flexbox } from '../flexbox'
-import { TextFieldProps } from './text-field'
+import { TextFieldProps } from '.'
 
 export const getVariantColor = (
   messageType: TextFieldProps['helperText']['messageType'],

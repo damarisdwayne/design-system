@@ -1,5 +1,4 @@
 import { forwardRef, Ref } from 'react'
-import { RadioButtonProps } from './types'
 
 import {
   StyledMasterRadioButtonWrapper,
@@ -12,6 +11,19 @@ import {
   StyledMessageStatus,
   StyledFilledContentRadionButton,
 } from './styles'
+
+import { ComponentProps } from '../../types'
+
+export interface RadioButtonProps extends ComponentProps {
+  label: string
+  id?: string
+  name?: string
+  disabled?: boolean
+  messageStatus?: string
+  isSelected: boolean
+  setIsSelected: (isSelected: boolean) => void
+  error?: boolean
+}
 
 export const RadioButton = forwardRef(
   (props: Partial<RadioButtonProps>, ref: Ref<HTMLDivElement>): JSX.Element => {

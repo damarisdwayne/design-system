@@ -9,7 +9,7 @@ import styled, { css } from 'styled-components'
 
 import { Flexbox } from '../flexbox'
 import { Typography } from '../typography'
-import { CheckboxProps } from './types'
+import { CheckboxProps } from '.'
 import { GetCheckboxActiveStyles, GetCheckboxHoverStyles } from './utils'
 
 export const StyledSquareCheckbox = styled(Flexbox)`
