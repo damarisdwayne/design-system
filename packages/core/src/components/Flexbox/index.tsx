@@ -24,7 +24,7 @@ export interface FlexboxProps extends ComponentProps {
 }
 
 export const Flexbox = forwardRef(
-  (props: FlexboxProps, ref: Ref<HTMLDivElement>) => {
+  (props: FlexboxProps, ref: Ref<HTMLDivElement>): JSX.Element => {
     const {
       children,
       alignItems = 'center',

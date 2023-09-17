@@ -24,7 +24,7 @@ export interface ButtonProps extends ComponentProps {
 }
 
 export const Button = forwardRef(
-  (props: ButtonProps, ref: Ref<HTMLButtonElement>) => {
+  (props: ButtonProps, ref: Ref<HTMLButtonElement>): JSX.Element => {
     const renderChildren = () => {
       const {
         iconButton,
