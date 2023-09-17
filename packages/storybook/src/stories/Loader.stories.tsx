@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Loader, Paper, Typography } from '@damaris-ui/core'
+import { Flexbox, Loader, Typography } from '@damaris-ui/core'
 import { DialogPlaceholder } from '../placeholders'
 
 export default {
@@ -9,18 +9,17 @@ export default {
 
 export const WithOverlay: ComponentStory<typeof Loader> = () => {
   return (
-    <Paper noBg fullScreen customStyles={{ padding: '2rem' }}>
+    <Flexbox fullScreen customStyles={{ padding: '2rem' }}>
       <DialogPlaceholder />
       <Loader size="25px" />
-    </Paper>
+    </Flexbox>
   )
 }
 export const Boxed: ComponentStory<typeof Loader> = () => {
   return (
-    <Paper noBg fullScreen>
+    <Flexbox fullScreen>
       <DialogPlaceholder />
-      <Paper
-        noBg
+      <Flexbox
         width="300px"
         height="200px"
         justifyContent="center"
@@ -30,22 +29,16 @@ export const Boxed: ComponentStory<typeof Loader> = () => {
         }}
       >
         <Loader boxed size="25px" />
-      </Paper>
-    </Paper>
+      </Flexbox>
+    </Flexbox>
   )
 }
 export const Standalone: ComponentStory<typeof Loader> = () => {
   return (
-    <Paper
-      noBg
-      fullScreen
-      flexDirection="row"
-      gap="8px"
-      justifyContent="center"
-    >
+    <Flexbox fullScreen flexDirection="row" gap="8px" justifyContent="center">
       <Typography>Standalone with no margin or positioning</Typography>
       <Loader standalone size="25px" />
-    </Paper>
+    </Flexbox>
   )
 }
 

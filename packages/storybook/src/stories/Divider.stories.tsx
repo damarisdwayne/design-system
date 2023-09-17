@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Divider } from '@damaris-ui/core'
+import { Divider, Flexbox } from '@damaris-ui/core'
 
 export default {
   title: 'Molecules/Divider',
@@ -22,7 +22,7 @@ export default {
 
 const Template: ComponentStory<typeof Divider> = (props) => {
   return (
-    <div>
+    <Flexbox width="450px">
       <Divider
         {...props}
         width={`${props.width ?? 450}px`}
@@ -38,7 +38,7 @@ const Template: ComponentStory<typeof Divider> = (props) => {
         width={`${props.width ?? 450}px`}
         height={`${props.height ?? 5}px`}
       />
-    </div>
+    </Flexbox>
   )
 }
 

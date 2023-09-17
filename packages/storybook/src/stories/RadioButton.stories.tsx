@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { RadioButton, Paper } from '@damaris-ui/core'
+import { RadioButton, Flexbox } from '@damaris-ui/core'
 import { withDesign } from 'storybook-addon-designs'
 import { useState } from 'react'
 
@@ -21,13 +21,13 @@ export default {
 const Template: ComponentStory<typeof RadioButton> = (props) => {
   const [isSelected, setIsSelected] = useState(false)
   return (
-    <Paper noBg>
+    <Flexbox>
       <RadioButton
         {...props}
         isSelected={props.isSelected ? props.isSelected : isSelected}
         setIsSelected={setIsSelected}
       />
-    </Paper>
+    </Flexbox>
   )
 }
 
