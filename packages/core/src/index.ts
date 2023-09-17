@@ -1,4 +1,5 @@
 export * from 'styled-components'
+export * from './components/button'
 export * from './components/checkbox'
 export * from './components/divider'
 export * from './components/flexbox'
