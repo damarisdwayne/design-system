@@ -1,0 +1,5 @@
+# build artifacts
+dist
+coverage
+packages/storybook/storybook-static
+packages/storybook/build
