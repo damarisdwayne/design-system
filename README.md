@@ -7,6 +7,7 @@ Welcome to the documentation for our Design System project. This Design System i
 - **`package/`**: The root directory of the monorepo.
   - **`core/`**: Contains core components to be exported.
   - **`eslint-config/`**: Houses ESLint configurations for maintaining code quality.
+  - **`prettier-config/`**: Houses prettier configurations for maintaining code quality.
   - **`storybook/`**: Provides documentation for components in the `core` package.
   - **`theme/`**: Holds styling-related configurations, including palettes, colors, grids, fonts, margins, shadows and spacings.
   - **`ts-config/`**: Contains TypeScript configurations.
@@ -63,6 +64,7 @@ You can easily integrate the core components, theme configurations, utilities, E
 yarn add @damaris-ui/core
 yarn add @damaris-ui/theme
 yarn add @damaris-ui/utils
+yarn add @damaris-ui/prettier-config
 yarn add @damaris-ui/eslint-config
 yarn add @damaris-ui/ts-config
 ```
@@ -77,12 +79,14 @@ Once the packages are installed, you can start using the Damaris UI Design Syste
 
 ```bash
 import React from 'react';
-import { Button } from '@damaris-ui/core';
+import { Box } from '@damaris-ui/core';
 
 function MyComponent() {
   return (
     <div>
-      <Button variant="primary">Click Me</Button>
+      <Box variant="primary">
+        Teste
+      </Box>
     </div>
   );
 }
