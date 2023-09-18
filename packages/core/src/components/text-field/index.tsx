@@ -8,10 +8,10 @@ import {
 } from './styles'
 import { Typography } from '../typography'
 import { Divider } from '../divider'
-import { Flexbox } from '../flexbox'
 import { Check, Eye, EyeClosed } from 'phosphor-react'
 import { pxToRem } from '@damaris-ui/utils'
 import { palette } from '@damaris-ui/theme'
+import { Box } from '../box'
 
 type HelperText = {
   label: string
@@ -72,7 +72,7 @@ export const TextField = forwardRef(
     return (
       <StyledTextFieldWrapper alignItems="flex-start">
         {label ? (
-          <Flexbox flexDirection="row">
+          <Box flexDirection="row">
             <Divider width="17px" noBorder />
             <Typography
               as="label"
@@ -89,7 +89,7 @@ export const TextField = forwardRef(
             >
               {label}
             </Typography>
-          </Flexbox>
+          </Box>
         ) : null}
         <StyledTextFieldContainer {...{ helperText }}>
           {!!prefix && <Prefix>{prefix}</Prefix>}

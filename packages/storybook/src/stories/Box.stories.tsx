@@ -1,11 +1,11 @@
-import { Paper } from '@damaris-ui/core'
+import { Box } from '@damaris-ui/core'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { withDesign } from 'storybook-addon-designs'
 import { PaperPlaceholder } from '../placeholders'
 
 export default {
-  title: 'Organisms/Default Paper',
-  component: Paper,
+  title: 'Organisms/Box',
+  component: Box,
   decorators: [withDesign],
   argTypes: {
     children: { table: { disable: true } },
@@ -43,11 +43,11 @@ export default {
       options: ['lg', 'md', 'sm'],
     },
   },
-} as ComponentMeta<typeof Paper>
+} as ComponentMeta<typeof Box>
 
-const Template: ComponentStory<typeof Paper> = (props) => {
+const Template: ComponentStory<typeof Box> = (props) => {
   const { children } = props
-  return <Paper {...props}>{children}</Paper>
+  return <Box {...props}>{children}</Box>
 }
 
 export const Default = Template.bind({})

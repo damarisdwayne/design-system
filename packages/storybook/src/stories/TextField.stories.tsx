@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { TextField, TextFieldProps, Flexbox } from '@damaris-ui/core'
+import { TextField, TextFieldProps } from '@damaris-ui/core'
 
 export default {
   title: 'Form/Text Input',
@@ -7,7 +7,7 @@ export default {
   args: {},
   decorators: [
     (Story) => {
-      return <Flexbox>{Story()}</Flexbox>
+      return <div>{Story()}</div>
     },
   ],
 } as Meta<TextFieldProps>

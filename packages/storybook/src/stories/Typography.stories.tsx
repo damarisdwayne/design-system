@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Divider, Flexbox, Typography } from '@damaris-ui/core'
+import { Box, Divider, Typography } from '@damaris-ui/core'
 export default {
   title: 'Molecules/Typography',
   component: Typography,
@@ -12,19 +12,19 @@ export default {
 
 export const Highlights: ComponentStory<typeof Typography> = () => (
   <>
-    <Flexbox width="calc(100vw - 150px)" alignItems="center" gap="20px" noWrap>
-      <Flexbox
+    <Box width="calc(100vw - 150px)" alignItems="center" gap="20px" noWrap>
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="highlight" size="lg">
             Highlight L
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 3rem
           </Typography>
@@ -36,21 +36,21 @@ export const Highlights: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 600
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="highlight" size="md">
             Highlight M
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 2.5rem
           </Typography>
@@ -62,21 +62,21 @@ export const Highlights: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 600
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="highlight" size="sm">
             Highlight S
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 2.25rem
           </Typography>
@@ -88,26 +88,26 @@ export const Highlights: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 600
           </Typography>
-        </Flexbox>
-      </Flexbox>
-    </Flexbox>
+        </Box>
+      </Box>
+    </Box>
   </>
 )
 export const Headings: ComponentStory<typeof Typography> = () => (
   <>
-    <Flexbox width="calc(100vw - 150px)" alignItems="center" gap="20px" noWrap>
-      <Flexbox
+    <Box width="calc(100vw - 150px)" alignItems="center" gap="20px" noWrap>
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="heading" size="h1">
             Headings H1
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 1.5rem
           </Typography>
@@ -119,21 +119,21 @@ export const Headings: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 600
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="heading" size="h2">
             Headings H2
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 1.25rem
           </Typography>
@@ -145,21 +145,21 @@ export const Headings: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 600
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="heading" size="h3">
             Headings H3
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 1.125rem
           </Typography>
@@ -171,21 +171,21 @@ export const Headings: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 600
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="heading" size="h4">
             Headings H4
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 1rem
           </Typography>
@@ -197,21 +197,21 @@ export const Headings: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 600
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="heading" size="h5">
             Headings H5
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 0.875rem
           </Typography>
@@ -223,21 +223,21 @@ export const Headings: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 600
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="heading" size="h6">
             Headings H6
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 0.75rem
           </Typography>
@@ -249,26 +249,26 @@ export const Headings: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 600
           </Typography>
-        </Flexbox>
-      </Flexbox>
-    </Flexbox>
+        </Box>
+      </Box>
+    </Box>
   </>
 )
 export const Paragraph: ComponentStory<typeof Typography> = () => (
   <>
-    <Flexbox width="calc(100vw - 150px)" alignItems="center" gap="20px" noWrap>
-      <Flexbox
+    <Box width="calc(100vw - 150px)" alignItems="center" gap="20px" noWrap>
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="body" size="lead" weight="medium">
             Paragraph Lead Medium
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 1.125rem
           </Typography>
@@ -280,21 +280,21 @@ export const Paragraph: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 500
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="body" size="lead" weight="light">
             Paragraph Lead Light
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 1.125rem
           </Typography>
@@ -306,21 +306,21 @@ export const Paragraph: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 300
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="body" size="normal" weight="medium">
             Paragraph Normal Medium
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 1rem
           </Typography>
@@ -332,21 +332,21 @@ export const Paragraph: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 500
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="body" size="normal" weight="light">
             Paragraph Normal Light
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 1rem
           </Typography>
@@ -358,21 +358,21 @@ export const Paragraph: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 300
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="body" size="small" weight="medium">
             Paragraph Small Medium
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 0.875rem
           </Typography>
@@ -384,21 +384,21 @@ export const Paragraph: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 500
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="body" size="small" weight="light">
             Paragraph Small Light
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 0.875rem
           </Typography>
@@ -410,21 +410,21 @@ export const Paragraph: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 300
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="body" size="tiny" weight="medium">
             Paragraph Tiny Medium
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 0.75rem
           </Typography>
@@ -436,21 +436,21 @@ export const Paragraph: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 500
           </Typography>
-        </Flexbox>
-      </Flexbox>
+        </Box>
+      </Box>
       <Divider height="10px" color="#ccc" />
-      <Flexbox
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="body" size="tiny" weight="light">
             Paragraph Tiny Light
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 0.75rem
           </Typography>
@@ -462,27 +462,27 @@ export const Paragraph: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 300
           </Typography>
-        </Flexbox>
-      </Flexbox>
-    </Flexbox>
+        </Box>
+      </Box>
+    </Box>
   </>
 )
 
 export const Buttons: ComponentStory<typeof Typography> = () => (
   <>
-    <Flexbox width="calc(100vw - 150px)" alignItems="center" gap="20px" noWrap>
-      <Flexbox
+    <Box width="calc(100vw - 150px)" alignItems="center" gap="20px" noWrap>
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="button" size="normal" weight="medium">
             Button Bold
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 0.875rem
           </Typography>
@@ -494,21 +494,21 @@ export const Buttons: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 700
           </Typography>
-        </Flexbox>
+        </Box>
         <Divider height="10px" color="#ccc" />
-      </Flexbox>
-      <Flexbox
+      </Box>
+      <Box
         fullWidth
         flexDirection="row"
         justifyContent="space-between"
         gap="10px"
       >
-        <Flexbox>
+        <Box>
           <Typography variant="button" size="small" weight="medium">
             Button Tiny Bold
           </Typography>
-        </Flexbox>
-        <Flexbox flexDirection="row" gap="20px" className="table-view">
+        </Box>
+        <Box flexDirection="row" gap="20px" className="table-view">
           <Typography variant="button" size="small">
             font-size: 0.75rem
           </Typography>
@@ -520,8 +520,8 @@ export const Buttons: ComponentStory<typeof Typography> = () => (
           <Typography variant="button" size="small">
             font-weight: 700
           </Typography>
-        </Flexbox>
-      </Flexbox>
-    </Flexbox>
+        </Box>
+      </Box>
+    </Box>
   </>
 )

@@ -1,23 +1,13 @@
 import {
-  Palette,
   borders,
-  fonts,
   grayScale,
   paddings,
   palette,
-  spacings,
   defaultTheme as theme,
 } from '@damaris-ui/theme'
-import { pxToRem } from '@damaris-ui/utils'
 import styled, { css, keyframes } from 'styled-components'
-import { ButtonProps } from '../button'
-import { Flexbox, FlexboxProps } from '../flexbox'
-import { PaperProps } from './index'
-
-export type CustomPaperProps = PaperProps &
-  ButtonProps & {
-    isSmall?: boolean
-  }
+import { BoxProps } from './index'
+import { flexPosition, getHeight, getWidth } from '@damaris-ui/utils'
 
 export const fadeInAnimation = keyframes`
   0% {  
@@ -30,8 +20,13 @@ export const fadeInAnimation = keyframes`
   }
 `
 
-export const StyledDefaultPaper = styled(Flexbox)<PaperProps>`
+export const StyledDefaultBox = styled.div<BoxProps>`
   ${({
+    alignItems,
+    justifyContent,
+    flexDirection,
+    alignSelf,
+    justifySelf,
     noRound,
     noShadow,
     noBg,
@@ -42,8 +37,26 @@ export const StyledDefaultPaper = styled(Flexbox)<PaperProps>`
     withHover,
     noPadding,
     minimal,
-  }: PaperProps) => {
+    width,
+    fullWidth,
+    fullHeight,
+    fullScreen,
+    height,
+    gap,
+    noWrap,
+  }: BoxProps) => {
     return css`
+    ${flexPosition(
+      alignItems,
+      justifyContent,
+      flexDirection,
+      alignSelf,
+      justifySelf,
+    )};
+      height: ${getHeight({ fullHeight, fullScreen, height })};
+      width: ${getWidth({ fullWidth, fullScreen, width })};
+      gap: ${gap ?? '0'};
+      flex-wrap: ${noWrap ? 'nowrap' : 'wrap'};
     margin: 0;
       padding-inline: ${
         noPadding ? '0 !important' : paddings.card.desktop.inline
@@ -94,49 +107,4 @@ export const StyledDefaultPaper = styled(Flexbox)<PaperProps>`
       ${customStyles ? { ...customStyles } : {}}
     `
   }}
-`
-
-type TitleProps = Partial<FlexboxProps & PaperProps>
-export const StyledPaperTitleWrapper = styled(Flexbox)<TitleProps>`
-  border-bottom: ${`1px solid ${palette.grayScale[100]}`};
-  padding: ${({ noPadding }): string | undefined =>
-    noPadding ? '0' : paddings.cardTitle};
-  ${({ cardTitleProps }) => cardTitleProps?.customStyles || {}}
-`
-
-export const StyledPaperTitle = styled.h4`
-  font-weight: ${fonts.heading.h1.fontWeight};
-  font-family: 'Inter', sans-serif;
-  font-size: ${fonts.heading.h1.fontSize};
-  line-height: ${fonts.heading.h1.lineHeight};
-  text-align: left;
-`
-
-export const StyledPaperActions = styled(Flexbox)`
-  padding: ${spacings.s9};
-  gap: ${spacings.s7};
-`
-
-export const StyledPaperFooterAlert = styled.div<{
-  alertProps?: PaperProps['alertProps']
-}>`
-  ${({ alertProps }) => {
-    const variant = alertProps?.variant || 'success'
-    return css`
-      background-color: ${palette.system[variant as keyof Palette['system']]};
-      font-size: ${fonts.body.small.fontSize};
-      color: ${['error', 'success'].includes(variant)
-        ? palette.grayScale[50]
-        : palette.grayScale[900]};
-      width: 100%;
-      padding: ${`${pxToRem(10)} ${spacings.s5}`};
-      font-size: ${spacings.s3};
-      text-align: left;
-      border-radius: ${`0 0 ${borders.radius.card} ${borders.radius.card}`};
-    `
-  }}
-`
-
-export const StyledPaperEndAdornment = styled(Flexbox)`
-  padding: ${`${pxToRem(10)} ${spacings.s5}`};
 `

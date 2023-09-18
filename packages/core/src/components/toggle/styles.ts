@@ -1,8 +1,8 @@
 import { grayScale, primary, shadows, spacings } from '@damaris-ui/theme'
 import { pxToRem } from '@damaris-ui/utils'
 import styled, { css } from 'styled-components'
-import { Flexbox } from '../flexbox'
 import { ToggleProps } from '.'
+import Box from '../box'
 
 export const StyledToggle = styled.input`
   visibility: hidden;
@@ -44,7 +44,7 @@ export const StyledToggleLabel = styled.label`
   }
 `
 
-export const StyledToggleBox = styled(Flexbox)<Partial<ToggleProps>>`
+export const StyledToggleBox = styled(Box)<Partial<ToggleProps>>`
   margin: 0 auto;
   width: ${spacings.s9};
   height: ${pxToRem(28)};
@@ -65,7 +65,7 @@ export const StyledToggleBox = styled(Flexbox)<Partial<ToggleProps>>`
     `}
 `
 
-export const StyledToggleWrapper = styled(Flexbox)`
+export const StyledToggleWrapper = styled(Box)`
   padding: 4px;
   transition: all 0.2s;
 

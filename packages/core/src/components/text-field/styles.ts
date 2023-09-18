@@ -7,8 +7,8 @@ import {
 } from '@damaris-ui/theme'
 import { pxToRem } from '@damaris-ui/utils'
 import styled from 'styled-components'
-import { Flexbox } from '../flexbox'
 import { TextFieldProps } from '.'
+import Box from '../box'
 
 export const getVariantColor = (
   messageType: TextFieldProps['helperText']['messageType'],
@@ -81,7 +81,7 @@ export const StyledTextField = styled.input`
   }
 `
 
-export const StyledTextFieldWrapper = styled(Flexbox)`
+export const StyledTextFieldWrapper = styled(Box)`
   position: relative;
   padding: 5px;
 `

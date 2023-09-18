@@ -1,6 +1,6 @@
 import React from 'react'
-import { Flexbox } from '../flexbox'
 import SpinnerIcon from '../../icons/spinner'
+import Box from '../box'
 export interface LoaderProps {
   standalone?: boolean
   boxed?: boolean
@@ -23,7 +23,7 @@ export const Loader: React.FC<LoaderProps> = ({
   }
   if (boxed) {
     return (
-      <Flexbox
+      <Box
         data-testid="loader"
         fullHeight
         fullWidth
@@ -31,12 +31,12 @@ export const Loader: React.FC<LoaderProps> = ({
         alignItems="center"
       >
         <SpinnerIconComponent />
-      </Flexbox>
+      </Box>
     )
   }
 
   return (
-    <Flexbox
+    <Box
       fullScreen
       justifyContent="center"
       customStyles={{
@@ -49,7 +49,7 @@ export const Loader: React.FC<LoaderProps> = ({
       data-testid="loader"
     >
       <SpinnerIconComponent />
-    </Flexbox>
+    </Box>
   )
 }
 
