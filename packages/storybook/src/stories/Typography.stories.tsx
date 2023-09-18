@@ -12,7 +12,7 @@ export default {
 
 export const Highlights: ComponentStory<typeof Typography> = () => (
   <>
-    <Box width="calc(100vw - 150px)" alignItems="center" gap="20px" noWrap>
+    <Box width="calc(100vw - 150px)" alignItems="center" gap="20px">
       <Box
         fullWidth
         flexDirection="row"
@@ -95,7 +95,7 @@ export const Highlights: ComponentStory<typeof Typography> = () => (
 )
 export const Headings: ComponentStory<typeof Typography> = () => (
   <>
-    <Box width="calc(100vw - 150px)" alignItems="center" gap="20px" noWrap>
+    <Box width="calc(100vw - 150px)" alignItems="center" gap="20px">
       <Box
         fullWidth
         flexDirection="row"
@@ -256,7 +256,7 @@ export const Headings: ComponentStory<typeof Typography> = () => (
 )
 export const Paragraph: ComponentStory<typeof Typography> = () => (
   <>
-    <Box width="calc(100vw - 150px)" alignItems="center" gap="20px" noWrap>
+    <Box width="calc(100vw - 150px)" alignItems="center" gap="20px">
       <Box
         fullWidth
         flexDirection="row"
@@ -470,7 +470,7 @@ export const Paragraph: ComponentStory<typeof Typography> = () => (
 
 export const Buttons: ComponentStory<typeof Typography> = () => (
   <>
-    <Box width="calc(100vw - 150px)" alignItems="center" gap="20px" noWrap>
+    <Box width="calc(100vw - 150px)" alignItems="center" gap="20px">
       <Box
         fullWidth
         flexDirection="row"

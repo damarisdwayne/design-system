@@ -68,8 +68,8 @@ export const StyledDefaultBox = styled.div<BoxProps>`
         isBlurred
           ? theme.shadows.blurred
           : withShadow
-          ? "unset"
-          : theme.shadows.default(grayScale[900])
+          ? theme.shadows.default(grayScale[900])
+          : "unset"
       };
       background-color: ${
         withBg ? bgColor ?? palette.grayScale[50] : "transparent"
