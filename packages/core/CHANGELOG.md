@@ -1,5 +1,11 @@
 # @damaris-ui/core
 
+## 4.0.0
+
+### Major Changes
+
+- imports adjusted
+
 ## 3.1.0
 
 ### Minor Changes
