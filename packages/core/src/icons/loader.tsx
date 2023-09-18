@@ -1,10 +1,10 @@
-import React from 'react'
-import { IconProps } from './types'
-import { colors } from '@damaris-ui/theme'
+import React from "react";
+import { IconProps } from "./types";
+import { colors } from "@damaris-ui/theme";
 
 export const LoaderIcon = React.forwardRef<SVGSVGElement, IconProps>(
   (props, ref) => {
-    const { color = colors.primary.dark, width = 70, height = 70 } = props
+    const { color = colors.primary.dark, width = 70, height = 70 } = props;
 
     return (
       <svg
@@ -34,8 +34,8 @@ export const LoaderIcon = React.forwardRef<SVGSVGElement, IconProps>(
           />
         </path>
       </svg>
-    )
-  },
-)
-LoaderIcon.displayName = 'LoaderIcon'
-export default LoaderIcon
+    );
+  }
+);
+LoaderIcon.displayName = "LoaderIcon";
+export default LoaderIcon;

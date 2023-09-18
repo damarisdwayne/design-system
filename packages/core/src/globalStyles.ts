@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
-import { palette } from '@damaris-ui/theme'
+import { palette } from "@damaris-ui/theme";
 
 export default createGlobalStyle`
   #root {
@@ -48,4 +48,4 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
-`
+`;

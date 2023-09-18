@@ -1,17 +1,17 @@
-import { palette } from '@damaris-ui/theme'
-import styled, { css } from 'styled-components'
-import { DividerProps } from '.'
+import { palette } from "@damaris-ui/theme";
+import styled, { css } from "styled-components";
+import { DividerProps } from ".";
 
 export const StyledDivider = styled.div`
   ${({ width, height, noBorder, borderColor, customStyles }: DividerProps) => {
     return css`
       display: block;
-      width: ${width ?? '100%'};
-      height: ${height ?? '1px'};
+      width: ${width ?? "100%"};
+      height: ${height ?? "1px"};
       border-bottom: ${noBorder
-        ? 'none'
+        ? "none"
         : `1px solid ${borderColor ?? palette.grayScale[600]}`};
       ${customStyles ? { ...customStyles } : {}}
-    `
+    `;
   }}
-`
+`;

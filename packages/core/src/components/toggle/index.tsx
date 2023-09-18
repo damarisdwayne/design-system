@@ -1,24 +1,24 @@
-import { primary, system } from '@damaris-ui/theme'
-import { pxToRem } from '@damaris-ui/utils'
-import React, { forwardRef, Ref } from 'react'
-import { Typography } from '../typography'
+import { primary, system } from "@damaris-ui/theme";
+import { pxToRem } from "@damaris-ui/utils";
+import React, { forwardRef, Ref } from "react";
+import { Typography } from "../typography";
 import {
   StyledToggleWrapper,
   StyledToggleBox,
   StyledToggle,
   StyledToggleLabel,
-} from './styles'
+} from "./styles";
 
 export interface ToggleProps {
-  isActive: boolean
-  setIsActive: React.Dispatch<React.SetStateAction<boolean>>
-  label: string
-  isError: boolean
+  isActive: boolean;
+  setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
+  label: string;
+  isError: boolean;
 }
 
 export const Toggle = forwardRef(
   (props: ToggleProps, ref: Ref<HTMLDivElement>): JSX.Element => {
-    const { isActive, setIsActive, label, isError } = props
+    const { isActive, setIsActive, label, isError } = props;
 
     return (
       <StyledToggleWrapper
@@ -31,14 +31,14 @@ export const Toggle = forwardRef(
         <StyledToggleBox
           alignItems="center"
           justifyContent="center"
-          data-testid={`toggle-content-${isActive ? 'active' : 'inactive'}`}
+          data-testid={`toggle-content-${isActive ? "active" : "inactive"}`}
           {...{ ref, isActive }}
         >
           <StyledToggle type="checkbox" name="option" id="option" />
           <StyledToggleLabel
             htmlFor="option"
             onClick={() => setIsActive(!isActive)}
-            data-testid={`toggle-label-${isActive ? 'active' : 'inactive'}`}
+            data-testid={`toggle-label-${isActive ? "active" : "inactive"}`}
           />
         </StyledToggleBox>
         <Typography
@@ -52,9 +52,9 @@ export const Toggle = forwardRef(
           {label}
         </Typography>
       </StyledToggleWrapper>
-    )
-  },
-)
+    );
+  }
+);
 
-Toggle.displayName = 'Toggle'
-export default Toggle
+Toggle.displayName = "Toggle";
+export default Toggle;

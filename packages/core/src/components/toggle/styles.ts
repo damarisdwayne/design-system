@@ -1,14 +1,14 @@
-import { grayScale, primary, shadows, spacings } from '@damaris-ui/theme'
-import { pxToRem } from '@damaris-ui/utils'
-import styled, { css } from 'styled-components'
-import { ToggleProps } from '.'
-import Box from '../box'
+import { grayScale, primary, shadows, spacings } from "@damaris-ui/theme";
+import { pxToRem } from "@damaris-ui/utils";
+import styled, { css } from "styled-components";
+import { ToggleProps } from ".";
+import Box from "../box";
 
 export const StyledToggle = styled.input`
   visibility: hidden;
   position: absolute;
   margin-left: -9999px;
-`
+`;
 
 export const StyledToggleLabel = styled.label`
   display: block;
@@ -26,7 +26,7 @@ export const StyledToggleLabel = styled.label`
     top: 3px;
     left: 3px;
     bottom: 3px;
-    content: '';
+    content: "";
   }
 
   &::before {
@@ -42,7 +42,7 @@ export const StyledToggleLabel = styled.label`
     border-radius: ${pxToRem(500)};
     transition: all 0.4s;
   }
-`
+`;
 
 export const StyledToggleBox = styled(Box)<Partial<ToggleProps>>`
   margin: 0 auto;
@@ -63,7 +63,7 @@ export const StyledToggleBox = styled(Box)<Partial<ToggleProps>>`
         transform: translateX(20px);
       }
     `}
-`
+`;
 
 export const StyledToggleWrapper = styled(Box)`
   padding: 4px;
@@ -74,4 +74,4 @@ export const StyledToggleWrapper = styled(Box)`
     box-shadow: ${shadows.containedFocus(primary.dark, primary.dark)};
     border-radius: ${spacings.s1};
   }
-`
+`;

@@ -1,31 +1,31 @@
-import { ComponentProps, forwardRef, useState } from 'react'
+import { ComponentProps, forwardRef, useState } from "react";
 import {
   StyledTextField,
   Prefix,
   StyledTextFieldContainer,
   StyledTextFieldWrapper,
   StyledTextFieldIcon,
-} from './styles'
-import { Typography } from '../typography'
-import { Divider } from '../divider'
-import { Check, Eye, EyeClosed } from 'phosphor-react'
-import { pxToRem } from '@damaris-ui/utils'
-import { palette } from '@damaris-ui/theme'
-import { Box } from '../box'
+} from "./styles";
+import { Typography } from "../typography";
+import { Divider } from "../divider";
+import { Check, Eye, EyeClosed } from "phosphor-react";
+import { pxToRem } from "@damaris-ui/utils";
+import { palette } from "@damaris-ui/theme";
+import { Box } from "../box";
 
 type HelperText = {
-  label: string
-  messageType: 'error' | 'success' | 'warning'
-}
+  label: string;
+  messageType: "error" | "success" | "warning";
+};
 
 export interface TextFieldProps extends ComponentProps<typeof StyledTextField> {
-  prefix?: string
-  isValid: boolean
-  label: string
-  isRequired: boolean
-  helperText: HelperText
-  customIcon: React.ReactNode
-  iconClickAction: (() => void) | undefined
+  prefix?: string;
+  isValid: boolean;
+  label: string;
+  isRequired: boolean;
+  helperText: HelperText;
+  customIcon: React.ReactNode;
+  iconClickAction: (() => void) | undefined;
 }
 
 export const TextField = forwardRef(
@@ -40,34 +40,34 @@ export const TextField = forwardRef(
     type,
     ...props
   }: TextFieldProps) => {
-    const [showPassword, setShowPassword] = useState(false)
-    const inputType = type || 'text'
-    const hasIcon = customIcon || isValid || type === 'password'
+    const [showPassword, setShowPassword] = useState(false);
+    const inputType = type || "text";
+    const hasIcon = customIcon || isValid || type === "password";
 
     const handleShowPassword = (): void => {
-      if (setShowPassword) setShowPassword(!showPassword)
-    }
+      if (setShowPassword) setShowPassword(!showPassword);
+    };
 
     const handleIconClick = (e: { preventDefault: () => void }): void => {
-      e.preventDefault()
-      if (inputType === 'password') {
-        handleShowPassword()
+      e.preventDefault();
+      if (inputType === "password") {
+        handleShowPassword();
       } else {
-        if (iconClickAction) iconClickAction()
+        if (iconClickAction) iconClickAction();
       }
-    }
+    };
 
     const handleType = (type: string): string => {
-      if (type === 'password' && showPassword) {
-        return 'text'
+      if (type === "password" && showPassword) {
+        return "text";
       }
 
-      if (type === 'password' && !showPassword) {
-        return 'password'
+      if (type === "password" && !showPassword) {
+        return "password";
       }
 
-      return type
-    }
+      return type;
+    };
 
     return (
       <StyledTextFieldWrapper alignItems="flex-start">
@@ -81,8 +81,8 @@ export const TextField = forwardRef(
               weight="light"
               gutterBottom="8px"
               colorScheme={{
-                type: 'text',
-                color: 'label',
+                type: "text",
+                color: "label",
               }}
               data-testid="text-field-label"
               isRequired={isRequired}
@@ -96,7 +96,7 @@ export const TextField = forwardRef(
           <StyledTextField {...props} type={handleType(inputType)} />
           {hasIcon && (
             <StyledTextFieldIcon onClick={handleIconClick}>
-              {inputType === 'password' && (
+              {inputType === "password" && (
                 <>
                   {showPassword ? (
                     <Eye
@@ -114,7 +114,7 @@ export const TextField = forwardRef(
                 </>
               )}
               {customIcon && customIcon}
-              {!customIcon && inputType !== 'password' && !!isValid && (
+              {!customIcon && inputType !== "password" && !!isValid && (
                 <Check
                   size={pxToRem(16)}
                   color={palette.primary.darker}
@@ -133,18 +133,18 @@ export const TextField = forwardRef(
             gutterLeft="19px"
             gutterTop="8px"
             colorScheme={{
-              type: 'system',
-              color: 'error',
+              type: "system",
+              color: "error",
             }}
           >
             {helperText.label}
           </Typography>
         )}
       </StyledTextFieldWrapper>
-    )
-  },
-)
+    );
+  }
+);
 
-TextField.displayName = 'TextField'
+TextField.displayName = "TextField";
 
-export default TextField
+export default TextField;

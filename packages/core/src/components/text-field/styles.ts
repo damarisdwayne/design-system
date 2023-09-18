@@ -4,24 +4,24 @@ import {
   palette,
   spacings,
   system,
-} from '@damaris-ui/theme'
-import { pxToRem } from '@damaris-ui/utils'
-import styled from 'styled-components'
-import { TextFieldProps } from '.'
-import Box from '../box'
+} from "@damaris-ui/theme";
+import { pxToRem } from "@damaris-ui/utils";
+import styled from "styled-components";
+import { TextFieldProps } from ".";
+import Box from "../box";
 
 export const getVariantColor = (
-  messageType: TextFieldProps['helperText']['messageType'],
+  messageType: TextFieldProps["helperText"]["messageType"]
 ) => {
   switch (messageType) {
-    case 'error':
-      return system.error
-    case 'warning':
-      return system.warning
+    case "error":
+      return system.error;
+    case "warning":
+      return system.warning;
     default:
-      return grayScale[500]
+      return grayScale[500];
   }
-}
+};
 
 export const StyledTextFieldContainer = styled.div<Partial<TextFieldProps>>`
   background-color: ${palette.grayScale[100]};
@@ -53,17 +53,17 @@ export const StyledTextFieldContainer = styled.div<Partial<TextFieldProps>>`
     opacity: 0.5;
     cursor: not-allowed;
   }
-`
+`;
 
 export const Prefix = styled.span`
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: ${pxToRem(16)};
   color: ${palette.grayScale[900]};
   font-weight: normal;
-`
+`;
 
 export const StyledTextField = styled.input`
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: ${pxToRem(16)};
   color: ${palette.grayScale[900]};
   font-weight: normal;
@@ -79,12 +79,12 @@ export const StyledTextField = styled.input`
   &:disabled {
     cursor: not-allowed;
   }
-`
+`;
 
 export const StyledTextFieldWrapper = styled(Box)`
   position: relative;
   padding: 5px;
-`
+`;
 
 export const StyledTextFieldIcon = styled.button`
   display: flex;
@@ -95,4 +95,4 @@ export const StyledTextFieldIcon = styled.button`
   outline: none;
   padding: 0;
   cursor: pointer;
-`
+`;

@@ -1,25 +1,25 @@
-import React from 'react'
-import SpinnerIcon from '../../icons/spinner'
-import Box from '../box'
+import React from "react";
+import SpinnerIcon from "../../icons/spinner";
+import Box from "../box";
 export interface LoaderProps {
-  standalone?: boolean
-  boxed?: boolean
-  color?: string
-  size?: string
+  standalone?: boolean;
+  boxed?: boolean;
+  color?: string;
+  size?: string;
 }
 
 export const Loader: React.FC<LoaderProps> = ({
   boxed = false,
   standalone = false,
   color,
-  size = '72px',
+  size = "72px",
 }) => {
   const SpinnerIconComponent = () => (
     <SpinnerIcon color={color} width={size} height={size} />
-  )
+  );
 
   if (standalone) {
-    return <SpinnerIconComponent />
+    return <SpinnerIconComponent />;
   }
   if (boxed) {
     return (
@@ -32,7 +32,7 @@ export const Loader: React.FC<LoaderProps> = ({
       >
         <SpinnerIconComponent />
       </Box>
-    )
+    );
   }
 
   return (
@@ -40,9 +40,9 @@ export const Loader: React.FC<LoaderProps> = ({
       fullScreen
       justifyContent="center"
       customStyles={{
-        position: 'absolute',
+        position: "absolute",
         zIndex: 9999,
-        background: 'rgba(255,255,255,0.5)',
+        background: "rgba(255,255,255,0.5)",
         top: 0,
         left: 0,
       }}
@@ -50,7 +50,7 @@ export const Loader: React.FC<LoaderProps> = ({
     >
       <SpinnerIconComponent />
     </Box>
-  )
-}
+  );
+};
 
-export default Loader
+export default Loader;

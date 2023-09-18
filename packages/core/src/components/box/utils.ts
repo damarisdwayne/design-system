@@ -3,44 +3,44 @@ export const flexPosition = (
   justify?: string | false,
   flexDirection?: string,
   alignSelf?: string | false,
-  justifySelf?: string | false,
+  justifySelf?: string | false
 ): string => `
   display: flex;
-  ${align ? `align-items: ${align};` : ''}
-  ${justify ? `justify-content: ${justify};` : ''};
-  ${flexDirection ? `flex-direction: ${flexDirection};` : ''};
-  ${alignSelf ? `align-self: ${alignSelf};` : ''};
-  ${justifySelf ? `justify-self: ${justifySelf};` : ''};
-`
+  ${align ? `align-items: ${align};` : ""}
+  ${justify ? `justify-content: ${justify};` : ""};
+  ${flexDirection ? `flex-direction: ${flexDirection};` : ""};
+  ${alignSelf ? `align-self: ${alignSelf};` : ""};
+  ${justifySelf ? `justify-self: ${justifySelf};` : ""};
+`;
 
-export const pxToRem = (px: number): string => `${px / 16}rem`
+export const pxToRem = (px: number): string => `${px / 16}rem`;
 
-export const spacing = (spacing: number): string => pxToRem(spacing * 8)
+export const spacing = (spacing: number): string => pxToRem(spacing * 8);
 
 type GetWidthProps = {
-  width?: string | number
-  fullWidth?: boolean
-  fullScreen?: boolean
-}
+  width?: string | number;
+  fullWidth?: boolean;
+  fullScreen?: boolean;
+};
 
 export const getWidth = (props: GetWidthProps): string => {
-  const { width, fullWidth, fullScreen } = props
-  if (fullScreen) return '100vw'
-  if (fullWidth) return '100%'
-  if (width) return typeof width === 'number' ? pxToRem(width) : width
-  return 'max-content'
-}
+  const { width, fullWidth, fullScreen } = props;
+  if (fullScreen) return "100vw";
+  if (fullWidth) return "100%";
+  if (width) return typeof width === "number" ? pxToRem(width) : width;
+  return "max-content";
+};
 
 type GetHeightProps = {
-  height?: string | number
-  fullHeight?: boolean
-  fullScreen?: boolean
-}
+  height?: string | number;
+  fullHeight?: boolean;
+  fullScreen?: boolean;
+};
 
 export const getHeight = (props: GetHeightProps): string => {
-  const { height, fullHeight, fullScreen } = props
-  if (fullScreen) return '100vh'
-  if (fullHeight) return '100%'
-  if (height) return typeof height === 'number' ? pxToRem(height) : height
-  return 'auto'
-}
+  const { height, fullHeight, fullScreen } = props;
+  if (fullScreen) return "100vh";
+  if (fullHeight) return "100%";
+  if (height) return typeof height === "number" ? pxToRem(height) : height;
+  return "auto";
+};

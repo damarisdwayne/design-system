@@ -15,6 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "@damaris-ui/eslint-config": "*",
+    "@damaris-ui/prettier-config": "*",
     "@damaris-ui/theme": "*",
     "@damaris-ui/utils": "*",
     "@damaris-ui/ts-config": "*",

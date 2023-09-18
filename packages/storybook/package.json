@@ -32,6 +32,7 @@
   "dependencies": {
     "@damaris-ui/core": "*",
     "@damaris-ui/eslint-config": "*",
+    "@damaris-ui/prettier-config": "*",
     "@damaris-ui/theme": "*",
     "@damaris-ui/ts-config": "*",
     "@storybook/addon-a11y": "^6.5.15",
