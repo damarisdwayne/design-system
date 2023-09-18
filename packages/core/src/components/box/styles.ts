@@ -27,15 +27,15 @@ export const StyledDefaultBox = styled.div<BoxProps>`
     flexDirection,
     alignSelf,
     justifySelf,
-    noRound,
-    noShadow,
-    noBg,
+    withRound,
+    withShadow,
+    withBg,
     isBlurred,
     fadeIn,
     customStyles,
     bgColor,
     withHover,
-    noPadding,
+    withPadding,
     minimal,
     width,
     fullWidth,
@@ -43,7 +43,7 @@ export const StyledDefaultBox = styled.div<BoxProps>`
     fullScreen,
     height,
     gap,
-    noWrap,
+    withWrap,
   }: BoxProps) => {
     return css`
     ${flexPosition(
@@ -56,24 +56,24 @@ export const StyledDefaultBox = styled.div<BoxProps>`
       height: ${getHeight({ fullHeight, fullScreen, height })};
       width: ${getWidth({ fullWidth, fullScreen, width })};
       gap: ${gap ?? '0'};
-      flex-wrap: ${noWrap ? 'nowrap' : 'wrap'};
-    margin: 0;
+      flex-wrap: ${withWrap ? 'wrap' : 'nowrap'};
+      margin: 0;
       padding-inline: ${
-        noPadding ? '0 !important' : paddings.card.desktop.inline
+        withPadding ? paddings.card.desktop.inline : '0 !important'
       };
       padding-block: ${
-        noPadding ? '0 !important' : paddings.card.desktop.block
+        withPadding ? paddings.card.desktop.block : '0 !important'
       };
-      border-radius: ${noRound || minimal ? 0 : borders.radius.card};
+      border-radius: ${withRound ? borders.radius.card : 0};
       box-shadow: ${
         isBlurred
           ? theme.shadows.blurred
-          : noShadow || minimal
+          : withShadow || minimal
           ? 'unset'
           : theme.shadows.default(grayScale[900])
       };
       background-color: ${
-        noBg || minimal ? 'transparent' : bgColor ?? palette.grayScale[50]
+        withBg ? bgColor ?? palette.grayScale[50] : 'transparent'
       };
       pointer-events: ${isBlurred ? 'none' : 'all'};
       transition: all 0.3s ease-in-out;
@@ -98,10 +98,10 @@ export const StyledDefaultBox = styled.div<BoxProps>`
         }
       @media (max-width: ${theme.gridSystem.vpBreakpoints.VPL - 1}px) {
         padding-inline: ${
-          noPadding ? '0 !important' : paddings.card.mobile.inline
+          withPadding ? paddings.card.mobile.inline : '0 !important'
         };
         padding-block: ${
-          noPadding ? '0 !important' : paddings.card.mobile.block
+          withPadding ? paddings.card.mobile.block : '0 !important'
         };
       }
       ${customStyles ? { ...customStyles } : {}}

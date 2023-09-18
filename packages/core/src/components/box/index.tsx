@@ -5,20 +5,20 @@ import { ComponentProps } from '../../types'
 
 export interface BoxProps extends ComponentProps {
   minimal?: boolean
-  noPadding?: boolean
+  withPadding?: boolean
   ref?: React.Ref<HTMLDivElement>
   flexDirection?: 'row' | 'column' | string
   bgColor?: string
   gap?: string
-  noWrap?: boolean
+  withWrap?: boolean
   height?: string | number
   fullHeight?: boolean
   width?: string | number
   fullWidth?: boolean
   fullScreen?: boolean
-  noRound?: boolean
-  noShadow?: boolean
-  noBg?: boolean
+  withRound?: boolean
+  withShadow?: boolean
+  withBg?: boolean
   isBlurred?: boolean
   fadeIn?: boolean
   withHover?: boolean
@@ -44,7 +44,7 @@ export const Box = forwardRef(
       <StyledDefaultBox
         ref={ref}
         data-testid="box-wrapper"
-        noPadding={rest.noPadding}
+        noPadding={rest.withPadding}
         justifyContent={rest.justifyContent ?? 'stretch'}
         {...{ width, height, bgColor, minimal, ...rest }}
       >
