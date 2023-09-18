@@ -4,5 +4,8 @@
   "private": false,
   "description": "Prettier configuration used by Dâmaris.",
   "license": "MIT",
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {
+    "prettier": "^3.0.0"
+  }
 }
