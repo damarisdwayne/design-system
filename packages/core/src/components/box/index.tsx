@@ -4,7 +4,6 @@ import { StyledDefaultBox } from "./styles";
 import { ComponentProps } from "../../types";
 
 export interface BoxProps extends ComponentProps {
-  minimal?: boolean;
   withPadding?: boolean;
   ref?: React.Ref<HTMLDivElement>;
   flexDirection?: "row" | "column" | string;
@@ -38,15 +37,27 @@ export const Box = forwardRef(
     { width, height, bgColor = undefined, ...rest }: BoxProps,
     ref: Ref<HTMLDivElement>
   ): JSX.Element => {
-    const { minimal = false, children } = rest;
+    const {
+      alignItems = "center",
+      justifyContent = "flex-start",
+      flexDirection = "column",
+      children,
+    } = rest;
 
     return (
       <StyledDefaultBox
         ref={ref}
         data-testid="box-wrapper"
         noPadding={rest.withPadding}
-        justifyContent={rest.justifyContent ?? "stretch"}
-        {...{ width, height, bgColor, minimal, ...rest }}
+        justifyContent={justifyContent ?? "stretch"}
+        {...{
+          width,
+          height,
+          bgColor,
+          alignItems,
+          flexDirection,
+          ...rest,
+        }}
       >
         {children}
       </StyledDefaultBox>

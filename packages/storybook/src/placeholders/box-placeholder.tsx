@@ -1,7 +1,7 @@
-import React from 'react'
-import { Typography } from '@damaris-ui/core'
+import React from "react";
+import { Typography } from "@damaris-ui/core";
 
-const PaperPlaceholder: React.FC = () => {
+const BoxPlaceholder: React.FC = () => {
   return (
     <>
       <Typography as="h6">This is a card with notification</Typography>
@@ -20,12 +20,8 @@ const PaperPlaceholder: React.FC = () => {
         quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
         voluptas nulla pariatur?
       </Typography>
-      {/* <Button data-testid="button-wrapper" variant="text" color="primary">
-        Continue
-        <ArrowRight />
-      </Button> */}
     </>
-  )
-}
+  );
+};
 
-export default PaperPlaceholder
+export default BoxPlaceholder;

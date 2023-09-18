@@ -36,7 +36,6 @@ export const StyledDefaultBox = styled.div<BoxProps>`
     bgColor,
     withHover,
     withPadding,
-    minimal,
     width,
     fullWidth,
     fullHeight,
@@ -68,7 +67,7 @@ export const StyledDefaultBox = styled.div<BoxProps>`
       box-shadow: ${
         isBlurred
           ? theme.shadows.blurred
-          : withShadow || minimal
+          : withShadow
           ? "unset"
           : theme.shadows.default(grayScale[900])
       };
