@@ -1,5 +1,11 @@
 # @damaris-ui/theme
 
+## 2.1.1
+
+### Patch Changes
+
+- card spacing changed
+
 ## 2.1.0
 
 ### Minor Changes

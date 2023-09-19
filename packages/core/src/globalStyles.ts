@@ -20,6 +20,7 @@ export default createGlobalStyle`
     overflow-y: auto;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
+    background-color: inherit;
   }
   a:disabled, button:disabled {
     cursor: not-allowed;

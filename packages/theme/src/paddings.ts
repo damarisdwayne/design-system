@@ -14,12 +14,12 @@ const paddings: Paddings = {
   },
   card: {
     desktop: {
-      inline: spacings.s9,
-      block: spacings.s9,
-    },
-    mobile: {
       inline: spacings.s6,
       block: spacings.s6,
+    },
+    mobile: {
+      inline: spacings.s5,
+      block: spacings.s5,
     },
   },
   cardList: {
