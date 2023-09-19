@@ -1,5 +1,11 @@
 # @damaris-ui/core
 
+## 4.1.0
+
+### Minor Changes
+
+- background color removed from globalStyles
+
 ## 4.0.0
 
 ### Major Changes
