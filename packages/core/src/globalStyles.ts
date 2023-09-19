@@ -1,7 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-import { palette } from "@damaris-ui/theme";
-
 export default createGlobalStyle`
   #root {
     padding:0 !important; ;
@@ -20,8 +18,6 @@ export default createGlobalStyle`
     max-height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    color: ${palette.text.primary};
-    background: ${palette.grayScale[200]};
     font-family: 'Inter', sans-serif;
     font-size: 16px;
   }
